@@ -4,7 +4,8 @@
    whatsapp : number in international format, digits only (no +, no spaces)
    deck     : the playing cards in "The Deck" (rank/suit are just for the card face)
    cutout   : transparent product image used on the playing cards and hero
-   watches  : add a watch = drop photo in assets/watches/ and add a line
+   watches  : add a watch = drop photo in assets/watches/, run  python tools/optimize-images.py ,
+              then add a line here
               tags: "casio" | "sport" | "dress"  (used by the filters)
    ========================================================= */
 window.PRIMETICK = {
@@ -21,13 +22,13 @@ window.PRIMETICK = {
 
   watches: [
     { id: "014", img: "w14", name: "Scottie Oval — Silver",       meta: "Leather strap · Dress",  tags: ["dress"] },
-    { id: "013", img: "w13", cutout: "assets/cutouts/w13.png", name: "Casio Illuminator — Gold",    meta: "Metal bracelet · Backlit digital",  tags: ["casio"] },
-    { id: "008", img: "w8",  cutout: "assets/cutouts/w8.png", name: "Poedagar Green Waffle",       meta: "Metal bracelet · Day-date",       tags: ["dress"] },
+    { id: "013", img: "w13", cutout: "assets/img/cutouts/w13.webp", name: "Casio Illuminator — Gold",    meta: "Metal bracelet · Backlit digital",  tags: ["casio"] },
+    { id: "008", img: "w8",  cutout: "assets/img/cutouts/w8.webp", name: "Poedagar Green Waffle",       meta: "Metal bracelet · Day-date",       tags: ["dress"] },
     { id: "020", img: "w20", name: "Skmei 2728 Jelly Series",     meta: "Eight colours · Digital",    tags: ["sport"] },
-    { id: "022", img: "w22", cutout: "assets/cutouts/w22.png", name: "Casio Ana-Digi — Teal",       meta: "Metal bracelet · Analogue + digital",       tags: ["casio"] },
-    { id: "011", img: "w11", cutout: "assets/cutouts/w11.png", name: "Scottie Oval — Gold/Emerald", meta: "Leather strap · Dress",        tags: ["dress"] },
+    { id: "022", img: "w22", cutout: "assets/img/cutouts/w22.webp", name: "Casio Ana-Digi — Teal",       meta: "Metal bracelet · Analogue + digital",       tags: ["casio"] },
+    { id: "011", img: "w11", cutout: "assets/img/cutouts/w11.webp", name: "Scottie Oval — Gold/Emerald", meta: "Leather strap · Dress",        tags: ["dress"] },
     { id: "006", img: "w6",  name: "G-Shock Gloss Duo",           meta: "Resin · Shock-resistant",   tags: ["casio", "sport"] },
-    { id: "001", img: "w1",  cutout: "assets/cutouts/w1.png", name: "Casio Ana-Digi — Rose",       meta: "Metal bracelet · Analogue + digital",        tags: ["casio"] },
+    { id: "001", img: "w1",  cutout: "assets/img/cutouts/w1.webp", name: "Casio Ana-Digi — Rose",       meta: "Metal bracelet · Analogue + digital",        tags: ["casio"] },
     { id: "023", img: "w23", name: "Curren Two-Tone Roman",       meta: "Metal bracelet · Date",           tags: ["dress"] },
     { id: "010", img: "w10", name: "Casio Illuminator — Stealth", meta: "Black metal · Backlit digital",  tags: ["casio"] },
     { id: "005", img: "w5",  name: "Casio Sunburst — Lime",       meta: "Black metal · Date",     tags: ["casio", "dress"] },

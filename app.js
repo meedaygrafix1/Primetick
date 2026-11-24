@@ -5,7 +5,7 @@
   const D = window.PRIMETICK;
   const byId = Object.fromEntries(D.watches.map(w => [w.id, w]));
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const imgSrc = w => `assets/watches/${w.img}.jpg`;
+  const imgSrc = (w, size = 1280) => `assets/img/watches/${w.img}-${size}.webp`;
   const waURL = msg => `https://wa.me/${D.whatsapp}?text=${encodeURIComponent(msg)}`;
   const askMsg = w => `Hi Primetick, is the ${w.name} (PT-${w.id}) available? What's the price today?`;
   $$('.wa-link').forEach(a => { a.href = waURL(a.dataset.msg); a.target = '_blank'; a.rel = 'noopener'; });
@@ -16,7 +16,7 @@
   /* The catalogue uses original photographs; the deck and hero use cutouts. */
   $('#grid').innerHTML = D.watches.map(w => `<article class="card-wrap" data-tags="${w.tags.join(' ')}"><div class="card">
     <button class="card-hit" data-id="${w.id}" aria-label="See the real photo of ${w.name}">
-      <div class="ph"><div><img src="${imgSrc(w)}" alt="${w.name}" width="600" height="750" loading="lazy"></div></div>
+      <div class="ph"><div><img src="${imgSrc(w, 640)}" alt="${w.name}" width="600" height="750" loading="lazy" decoding="async"></div></div>
       <span class="no">PT-${w.id}</span><h3>${w.name}</h3><p class="meta">${w.meta}</p>
     </button><a class="ask" href="${waURL(askMsg(w))}" aria-label="Ask for the price of ${w.name}" target="_blank" rel="noopener">Ask for the price</a>
   </div></article>`).join('');
@@ -57,7 +57,7 @@
       const w = byId[c.id], red = c.suit === '♥' || c.suit === '♦';
       const img = w.cutout
         ? `<img class="cut" src="${w.cutout}" alt="" draggable="false">`
-        : `<img src="${imgSrc(w)}" alt="" draggable="false" ${i > 1 ? 'loading="lazy"' : ''}>`;
+        : `<img src="${imgSrc(w, 640)}" alt="" draggable="false" ${i > 1 ? 'loading="lazy"' : ''}>`;
       const idx = `<span class="r">${c.rank}</span><span class="s">${c.suit}</span>`;
       return `<article class="pcard${red ? ' red' : ''}" data-i="${i}" data-watch="${w.id}" aria-label="${w.name}">
         <div class="idx tl">${idx}</div><div class="art">${img}</div><div class="idx br">${idx}</div></article>`;

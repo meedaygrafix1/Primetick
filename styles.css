@@ -25,7 +25,8 @@ button:disabled{cursor:default}
 .text-link{display:inline-block;width:fit-content;min-height:44px;font-size:1rem;line-height:1.5;text-decoration-thickness:1px;text-underline-offset:6px;padding:8px 0}
 .eyebrow,.sec-kicker{font:600 .75rem/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
 .nav{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:64px;padding:calc(10px + env(safe-area-inset-top,0px)) max(var(--gutter),calc((100vw - var(--page))/2)) 10px;background:var(--paper);border-bottom:1px solid var(--rule)}
-.logo{font:1.75rem/1 var(--black);text-decoration:none}
+.logo{display:inline-flex;align-items:center;gap:10px;font:1.75rem/1 var(--black);text-decoration:none}
+.logo-mark{width:32px;height:32px;flex:none;margin-top:-2px}
 .nav-links{display:flex;gap:30px;font:500 .875rem/1.4 var(--sans)}
 .nav-links a{text-decoration:none;padding:8px 0}
 .nav-contact{display:inline-flex;align-items:center;min-height:44px;font:500 .875rem/1.4 var(--sans);text-decoration-thickness:1px}
@@ -46,7 +47,6 @@ button:disabled{cursor:default}
 .hero-product{grid-area:product;min-width:0;border-left:1px solid var(--rule);padding-left:10%;display:flex;flex-direction:column;justify-content:center}
 .hero-watch{position:relative;display:block;width:100%;height:470px;border:0;background:none}
 .hero-watch img{position:absolute;inset:8px 14px 24px;width:calc(100% - 28px);height:calc(100% - 32px);max-width:none;object-fit:contain;filter:drop-shadow(8px 14px 9px rgba(56,37,6,.18));transition:transform 220ms var(--ease-out)}
-.image-invite{position:absolute;right:0;bottom:8px;font-size:.875rem;font-style:italic;color:var(--muted);background:var(--paper);padding-left:8px}
 .hero-product figcaption{display:flex;gap:18px;align-items:start;border-top:1px solid var(--rule);padding-top:18px;margin-top:18px}
 .product-note{font:600 .6875rem/1.5 var(--sans);letter-spacing:.06em;text-transform:uppercase;max-width:82px;color:var(--red)}
 .product-caption{display:flex;flex-direction:column;gap:4px}
